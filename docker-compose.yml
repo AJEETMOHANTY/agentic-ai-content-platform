@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+
+  blog-agent:
+
+    build: .
+
+    container_name: blog-agent
+
+    ports:
+      - "8501:8501"
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./images:/app/images
